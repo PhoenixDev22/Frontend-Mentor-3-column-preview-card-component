@@ -136,10 +136,15 @@ main .card  .card__btn:hover{
 }
 /* Start styling the attribution  */
 .attribution { 
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem; 
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
     font-family: var(--ff-Lexend-Deca);
-    font-size: 0.813rem; 
-    text-align: center; 
-    padding: 2rem 0;
 }
 .attribution a { 
     color: var(--Bright-orange); 
