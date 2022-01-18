@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+:root{
+    /*primary colors*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Verydark-cyan: hsl(179, 100%, 13%);
+    /* neutral colors/*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    /* font family*/
+    --ff-Lexend-Deca: 'Lexend Deca', sans-serif;
+    --ff-Big-Shoulders-Display: 'Big Shoulders Display', cursive;
+}
+html{
+    user-select: none;
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body{
+    background-color: var(--Very-light-gray);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    padding: 80px 30px;  
+
+}
+/* Hide the element visually but still accessible by the screen reader */
+.sr-only {
+    position: absolute !important;
+    margin: -1px !important;
+    -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+/* the main content that have all the cards */
+main {
+    max-width: 57.5rem;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+main .card{
+    flex-basis: 33.33%;
+    min-width: 15rem;
+    min-height:30.625rem;
+    padding: 3rem;
+    display: -webkit-box;
+            display: -ms-flexbox;
+                display: flex;
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+/* styling the title and description and the button */
+main .card .title{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: 1.25rem;
+    color: var(--Very-light-gray);
+    font-family: var(--ff-Big-Shoulders-Display);
+    font-weight: 700;
+    margin-top: 1.875rem;
+}
+main .card .card__description {
+    font-size: 0.9375rem;
+    color: var(--Transparent-white);
+    font-family: var(--ff-Lexend-Deca);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 1.25rem;
+    margin-bottom: auto;
+    opacity: .9;
+}
+main .card .card__btn{
+    display: inline-block;
+    padding: 1rem 1.563rem ;
+    text-decoration: none;
+    font-family: var(--ff-Lexend-Deca);
+    font-weight: 400;
+    background: var(--Very-light-gray);
+    border-radius: 1.875rem;
+    cursor: pointer;
+    border: 1px solid var(--Very-light-gray);
+    -webkit-transition: background-color .4s linear;
+    transition: background-color .4s linear;
+    margin-top: 2.5rem;
+    color: #000;
+    mix-blend-mode: screen;
+}
+/* Setting the background colors and border-radius to the 3 cards  */
+main .sedans__col{
+    background-color: var(--Bright-orange);
+}
+main .luxury__col{
+    background-color: var(--Verydark-cyan); 
+}
+main .suvs__col{
+    background-color: var(--Dark-cyan);
+}
+main .card  .card__btn:hover{
+    background: transparent;
+    color: var(--Very-light-gray);
+}
+/* Start styling the attribution  */
+.attribution { 
+    font-family: var(--ff-Lexend-Deca);
+    font-size: 0.813rem; 
+    text-align: center; 
+    padding: 2rem 0;
+}
+.attribution a { 
+    color: var(--Bright-orange); 
+    -webkit-transition: all .4s ease;
+    transition: all 0.4s ease;
+}
+.attribution a:hover{ 
+    color: var(--Dark-cyan); 
+    text-decoration: none;
+}
+.attribution a:focus-visible {
+    outline: 0.125rem solid var(--Dark-cyan);
+    text-decoration: none;
+}  
+/* ------------ media query for screens less than 48.75rem------------- */
+@media screen and (max-width:48.75rem){
+    body{
+        padding: 3.125rem 2.875rem;
+    }
+    main{
+        width: 60%;
+        min-width: 18rem;
+        flex-wrap: wrap;
+    }
+    main .card{
+        flex-basis:100%;   
+        min-height: auto;
+    }
+    main .card .title{
+        font-size: 1.875rem;
+    }
+    main .card .card__img{
+        width: 3.438rem;
+    }
+}
