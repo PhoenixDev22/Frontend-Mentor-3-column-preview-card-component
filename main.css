@@ -137,7 +137,7 @@ main .card  .card__btn:hover{
 /* Start styling the attribution  */
 .attribution { 
     position: relative;
-    bottom: 1rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.875rem; 
